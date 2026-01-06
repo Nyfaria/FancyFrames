@@ -14,7 +14,7 @@ import net.minecraft.world.entity.*;
 public class IronFrame extends FrameModel {
     @Frame.Location
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "iron_frame"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/model/frame/iron_frame.png");
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/iron_frame.png");
     private final ModelPart group;
     private final ModelPart left_frame;
     private final ModelPart bottom_frame;

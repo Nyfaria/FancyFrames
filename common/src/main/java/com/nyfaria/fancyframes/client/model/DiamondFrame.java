@@ -14,7 +14,7 @@ import net.minecraft.world.entity.*;
 public class DiamondFrame extends FrameModel {
     @Frame.Location
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "diamond_frame"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/model/diamond_frame.png");
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/diamond_frame.png");
     private final ModelPart group;
     private final ModelPart left_frame;
     private final ModelPart bottom_frame;

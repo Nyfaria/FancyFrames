@@ -14,7 +14,7 @@ import net.minecraft.world.entity.*;
 public class NetheriteFrameThin extends FrameModel {
     @Frame.Location
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "netherite_frame_thin"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/model/netherite_frame_thin.png");
+    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/netherite_frame_thin.png");
     private final ModelPart group;
     private final ModelPart left_frame;
     private final ModelPart bottom_frame;
