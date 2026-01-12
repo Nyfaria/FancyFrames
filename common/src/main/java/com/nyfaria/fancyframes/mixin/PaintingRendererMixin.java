@@ -23,7 +23,7 @@ public class PaintingRendererMixin {
 //        this.fancyFrames$copperFrameModel = new CopperFrame(context.bakeLayer(CopperFrame.LAYER_LOCATION));
     }
 
-    @Inject(method = "render(Lnet/minecraft/world/entity/decoration/Painting;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V", at = @At("TAIL"))
+    @Inject(method = "render(Lnet/minecraft/world/entity/decoration/Painting;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/vertex/PoseStack;popPose()V"))
     private void onRender(Painting entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight, CallbackInfo ci) {
         if(Services.PLATFORM.getFrameLoc(entity) != null) {
             ClientRenderHelper.renderPaintingFrame(entity, poseStack, buffer, packedLight, ModelStorage.MODELS.get(Services.PLATFORM.getFrameLoc(entity)));

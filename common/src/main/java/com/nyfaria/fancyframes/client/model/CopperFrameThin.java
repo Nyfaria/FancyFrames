@@ -47,72 +47,18 @@ public class CopperFrameThin extends FrameModel {
 
         PartDefinition top_right_connector = group.addOrReplaceChild("top_right_connector", CubeListBuilder.create().texOffs(12, 4).addBox(-18.0F, -16.0F, 8.5F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.2F)), PartPose.offset(10.0F, 8.0F, -9.0F));
 
-        PartDefinition top_left_corner = group.addOrReplaceChild("top_left_corner", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-6.0F, 8.0F, -7.0F));
+        PartDefinition top_left_corner_v = group.addOrReplaceChild("top_left_corner_v", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-6.0F, 8.0F, -7.0F));
 
-        PartDefinition bottom_left_corner = group.addOrReplaceChild("bottom_left_corner", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-6.0F, 23.0F, -7.0F));
+        PartDefinition bottom_left_corner_v = group.addOrReplaceChild("bottom_left_corner_v", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-6.0F, 23.0F, -7.0F));
 
-        PartDefinition bottom_right_corner = group.addOrReplaceChild("bottom_right_corner", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(9.0F, 23.0F, -7.0F));
+        PartDefinition bottom_right_corner_v = group.addOrReplaceChild("bottom_right_corner_v", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(9.0F, 23.0F, -7.0F));
 
-        PartDefinition top_right_corner = group.addOrReplaceChild("top_right_corner", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(9.0F, 8.0F, -7.0F));
+        PartDefinition top_right_corner_v = group.addOrReplaceChild("top_right_corner_v", CubeListBuilder.create().texOffs(0, 17).addBox(-2.0F, -16.0F, 6.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(9.0F, 8.0F, -7.0F));
 
         return LayerDefinition.create(meshdefinition, 32, 32);
     }
 
-    @Override
-    public void setupDir(Part part) {
-        left_frame.visible = false;
-        right_frame.visible = false;
-        top_frame.visible = false;
-        bottom_frame.visible = false;
-        top_left_connector.visible = false;
-        top_right_connector.visible = false;
-        bottom_left_connector.visible = false;
-        bottom_right_connector.visible = false;
-        switch (part) {
-            case TOP_LEFT -> {
-                top_left_connector.visible = true;
-                left_frame.visible = true;
-                top_frame.visible = true;
-            }
-            case TOP_RIGHT -> {
-                top_right_connector.visible = true;
-                right_frame.visible = true;
-                top_frame.visible = true;
-            }
-            case BOTTOM_LEFT -> {
-                bottom_left_connector.visible = true;
-                left_frame.visible = true;
-                bottom_frame.visible = true;
-            }
-            case BOTTOM_RIGHT -> {
-                bottom_right_connector.visible = true;
-                right_frame.visible = true;
-                bottom_frame.visible = true;
-            }
-            case LEFT_FRAME -> {
-                left_frame.visible = true;
-            }
-            case RIGHT_FRAME -> {
-                right_frame.visible = true;
-            }
-            case TOP_FRAME -> {
-                top_frame.visible = true;
-            }
-            case BOTTOM_FRAME -> {
-                bottom_frame.visible = true;
-            }
-            case ALL -> {
-                left_frame.visible = true;
-                right_frame.visible = true;
-                top_frame.visible = true;
-                bottom_frame.visible = true;
-                top_left_connector.visible = true;
-                top_right_connector.visible = true;
-                bottom_left_connector.visible = true;
-                bottom_right_connector.visible = true;
-            }
-        }
-    }
+
 
     @Override
     public ModelPart getGroup() {

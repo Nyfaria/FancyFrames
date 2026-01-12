@@ -10,12 +10,12 @@ import net.minecraft.world.entity.decoration.*;
 
 public class ClientRenderHelper {
 
-    public static<T extends ItemFrame> void renderFrame(T entity, PoseStack poseStack, MultiBufferSource buffer, int packedLight, FrameModel copperFrameModel) {
+    public static <T extends ItemFrame> void renderFrame(T entity, PoseStack poseStack, MultiBufferSource buffer, int packedLight, FrameModel copperFrameModel) {
         Direction facing = entity.getDirection();
         poseStack.pushPose();
-        poseStack.mulPose(Axis.YP.rotationDegrees(-facing.toYRot() + 180.0F));
-        poseStack.translate(0.0D, 0.0D, -3f/16f);
-        poseStack.translate(0.0D, -12/16f, 0.0d);
+//        poseStack.mulPose(Axis.YP.rotationDegrees(-facing.toYRot() + 180.0F));
+        poseStack.scale(1, -1, 1);
+        poseStack.translate(0, -1, 0);
         copperFrameModel.setupDir(FrameModel.Part.ALL);
         copperFrameModel.renderToBuffer(
                 poseStack,
@@ -26,8 +26,8 @@ public class ClientRenderHelper {
         );
         poseStack.popPose();
     }
+
     public static <T extends Painting> void renderPaintingFrame(T entity, PoseStack poseStack, MultiBufferSource buffer, int packedLight, FrameModel copperFrameModel) {
-        Direction facing = entity.getDirection();
         PaintingVariant variant = entity.getVariant().value();
 
         int widthInBlocks = variant.width();
@@ -41,11 +41,11 @@ public class ClientRenderHelper {
 
                 if (isEdge) {
                     poseStack.pushPose();
-                    poseStack.mulPose(Axis.YP.rotationDegrees(-facing.toYRot() + 180.0F));
+                    poseStack.scale(1, -1, 1);
+                    poseStack.scale(1.001f, 1.001f, 1.001f);
                     float offsetX = (x - (widthInBlocks - 1) / 2.0f);
                     float offsetY = (y - (heightInBlocks - 1) / 2.0f);
-                    poseStack.translate(offsetX, offsetY - (16f/16f), -7.5/16f);
-                    poseStack.scale(1.01f, 1.01f, 1.01f);
+                    poseStack.translate(offsetX, offsetY - (16f / 16f), -7.5 / 16f);
                     copperFrameModel.setupDir(calculatePart(x, y, widthInBlocks, heightInBlocks));
                     copperFrameModel.renderToBuffer(
                             poseStack,
@@ -60,14 +60,33 @@ public class ClientRenderHelper {
             }
         }
     }
+
     public static FrameModel.Part calculatePart(int x, int y, int width, int height) {
         boolean isLeft = (x == 0);
         boolean isRight = (x == width - 1);
         boolean isTop = (y == 0);
         boolean isBottom = (y == height - 1);
-        if(isLeft && isTop && isRight && isBottom){
+
+        if (isLeft && isTop && isRight && isBottom) {
             return FrameModel.Part.ALL;
         }
+
+        if (isLeft && isRight) {
+            if (isTop) {
+                return FrameModel.Part.TOP_ALL;
+            } else if (isBottom) {
+                return FrameModel.Part.BOTTOM_ALL;
+            }
+        }
+
+        if (isTop && isBottom) {
+            if (isLeft) {
+                return FrameModel.Part.LEFT_ALL;
+            } else if (isRight) {
+                return FrameModel.Part.RIGHT_ALL;
+            }
+        }
+
         if (isLeft && isTop) {
             return FrameModel.Part.TOP_LEFT;
         } else if (isRight && isTop) {

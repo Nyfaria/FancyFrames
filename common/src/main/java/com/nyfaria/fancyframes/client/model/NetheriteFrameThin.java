@@ -44,13 +44,13 @@ public class NetheriteFrameThin extends FrameModel {
 
         PartDefinition top_right_connector = group.addOrReplaceChild("top_right_connector", CubeListBuilder.create().texOffs(8, 7).mirror().addBox(-4.0F, -16.0F, 8.5F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.2F)).mirror(false), PartPose.offset(10.0F, 8.0F, -9.0F));
 
-        PartDefinition top_right_corner = group.addOrReplaceChild("top_right_corner", CubeListBuilder.create().texOffs(0, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(8.0F, -6.0F, -0.5F));
+        PartDefinition top_right_corner_v = group.addOrReplaceChild("top_right_corner_v", CubeListBuilder.create().texOffs(0, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(8.0F, -6.0F, -0.5F));
 
-        PartDefinition bottom_right_corner = group.addOrReplaceChild("bottom_right_corner", CubeListBuilder.create().texOffs(0, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(8.0F, 9.0F, -0.5F));
+        PartDefinition bottom_right_corner_v = group.addOrReplaceChild("bottom_right_corner_v", CubeListBuilder.create().texOffs(0, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(8.0F, 9.0F, -0.5F));
 
-        PartDefinition bottom_left_corner = group.addOrReplaceChild("bottom_left_corner", CubeListBuilder.create().texOffs(2, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-7.0F, 9.0F, -0.5F));
+        PartDefinition bottom_left_corner_v = group.addOrReplaceChild("bottom_left_corner_v", CubeListBuilder.create().texOffs(2, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-7.0F, 9.0F, -0.5F));
 
-        PartDefinition top_left_corner = group.addOrReplaceChild("top_left_corner", CubeListBuilder.create().texOffs(0, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-7.0F, -6.0F, -0.5F));
+        PartDefinition top_left_corner_v = group.addOrReplaceChild("top_left_corner_v", CubeListBuilder.create().texOffs(0, 17).addBox(-1.0F, -2.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-7.0F, -6.0F, -0.5F));
 
         return LayerDefinition.create(meshdefinition, 32, 32);
     }
