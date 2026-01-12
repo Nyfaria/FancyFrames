@@ -15,26 +15,9 @@ public class StoneFrame extends FrameModel {
     @Frame.Location
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "stone_frame"), "main");
     public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/stone_frame.png");
-    private final ModelPart group;
-    private final ModelPart left_frame;
-    private final ModelPart bottom_frame;
-    private final ModelPart top_frame;
-    private final ModelPart right_frame;
-    private final ModelPart top_left_connector;
-    private final ModelPart bottom_left_connector;
-    private final ModelPart bottom_right_connector;
-    private final ModelPart top_right_connector;
 
     public StoneFrame(ModelPart root) {
-        this.group = root.getChild("group");
-        this.left_frame = this.group.getChild("left_frame");
-        this.bottom_frame = this.group.getChild("bottom_frame");
-        this.top_frame = this.group.getChild("top_frame");
-        this.right_frame = this.group.getChild("right_frame");
-        this.top_left_connector = this.group.getChild("top_left_connector");
-        this.bottom_left_connector = this.group.getChild("bottom_left_connector");
-        this.bottom_right_connector = this.group.getChild("bottom_right_connector");
-        this.top_right_connector = this.group.getChild("top_right_connector");
+        super(root);
     }
 
     @Frame.Layer
@@ -70,68 +53,6 @@ public class StoneFrame extends FrameModel {
         PartDefinition cube_r4 = top_right_connector.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(18, 8).addBox(-1.0F, -0.5F, -1.0F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.2F)), PartPose.offsetAndRotation(-3.0F, -15.5F, 9.5F, 0.0F, 0.0F, 0.2618F));
 
         return LayerDefinition.create(meshdefinition, 32, 32);
-    }
-
-
-    @Override
-    public void setupDir(Part part) {
-        left_frame.visible = false;
-        right_frame.visible = false;
-        top_frame.visible = false;
-        bottom_frame.visible = false;
-        top_left_connector.visible = false;
-        top_right_connector.visible = false;
-        bottom_left_connector.visible = false;
-        bottom_right_connector.visible = false;
-        switch (part) {
-            case TOP_LEFT -> {
-                top_left_connector.visible = true;
-                left_frame.visible = true;
-                top_frame.visible = true;
-            }
-            case TOP_RIGHT -> {
-                top_right_connector.visible = true;
-                right_frame.visible = true;
-                top_frame.visible = true;
-            }
-            case BOTTOM_LEFT -> {
-                bottom_left_connector.visible = true;
-                left_frame.visible = true;
-                bottom_frame.visible = true;
-            }
-            case BOTTOM_RIGHT -> {
-                bottom_right_connector.visible = true;
-                right_frame.visible = true;
-                bottom_frame.visible = true;
-            }
-            case LEFT_FRAME -> {
-                left_frame.visible = true;
-            }
-            case RIGHT_FRAME -> {
-                right_frame.visible = true;
-            }
-            case TOP_FRAME -> {
-                top_frame.visible = true;
-            }
-            case BOTTOM_FRAME -> {
-                bottom_frame.visible = true;
-            }
-            case ALL -> {
-                left_frame.visible = true;
-                right_frame.visible = true;
-                top_frame.visible = true;
-                bottom_frame.visible = true;
-                top_left_connector.visible = true;
-                top_right_connector.visible = true;
-                bottom_left_connector.visible = true;
-                bottom_right_connector.visible = true;
-            }
-        }
-    }
-
-    @Override
-    public ModelPart getGroup() {
-        return group;
     }
 
     @Override

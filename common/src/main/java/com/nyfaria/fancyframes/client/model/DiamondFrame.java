@@ -15,26 +15,10 @@ public class DiamondFrame extends FrameModel {
     @Frame.Location
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "diamond_frame"), "main");
     public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/diamond_frame.png");
-    private final ModelPart group;
-    private final ModelPart left_frame;
-    private final ModelPart bottom_frame;
-    private final ModelPart top_frame;
-    private final ModelPart right_frame;
-    private final ModelPart top_left_connector;
-    private final ModelPart bottom_left_connector;
-    private final ModelPart bottom_right_connector;
-    private final ModelPart top_right_connector;
+
 
     public DiamondFrame(ModelPart root) {
-        this.group = root.getChild("group");
-        this.left_frame = this.group.getChild("left_frame");
-        this.bottom_frame = this.group.getChild("bottom_frame");
-        this.top_frame = this.group.getChild("top_frame");
-        this.right_frame = this.group.getChild("right_frame");
-        this.top_left_connector = this.group.getChild("top_left_connector");
-        this.bottom_left_connector = this.group.getChild("bottom_left_connector");
-        this.bottom_right_connector = this.group.getChild("bottom_right_connector");
-        this.top_right_connector = this.group.getChild("top_right_connector");
+        super(root);
     }
 
     @Frame.Layer
