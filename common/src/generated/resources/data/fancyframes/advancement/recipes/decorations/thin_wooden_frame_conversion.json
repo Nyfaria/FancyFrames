@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fancyframes:thin_wooden_frame_conversion"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wooden_frame": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fancyframes:wooden_frame"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wooden_frame"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fancyframes:thin_wooden_frame_conversion"
+    ]
+  }
+}

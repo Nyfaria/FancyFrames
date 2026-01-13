@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_frame": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fancyframes:iron_frame"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fancyframes:thin_iron_frame_conversion"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_frame"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fancyframes:thin_iron_frame_conversion"
+    ]
+  }
+}

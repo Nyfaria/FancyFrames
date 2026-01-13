@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:item_frame"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    " L ",
+    "LFL",
+    " L "
+  ],
+  "result": {
+    "count": 1,
+    "id": "fancyframes:wooden_frame"
+  }
+}

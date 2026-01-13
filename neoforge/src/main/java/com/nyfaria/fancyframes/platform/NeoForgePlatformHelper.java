@@ -29,7 +29,7 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
 
     @Override
     public ResourceLocation getFrameLoc(Entity entity) {
-        return entity.getData(FancyFramesMod.FRAME);
+        return entity.getExistingDataOrNull(FancyFramesMod.FRAME);
     }
 
     @Override

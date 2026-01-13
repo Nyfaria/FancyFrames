@@ -34,7 +34,8 @@ public class ModLangProvider extends LanguageProvider {
         ItemInit.ITEMS.getEntries().forEach(this::itemLang);
         EntityInit.ENTITIES.getEntries().forEach(this::entityLang);
         BlockInit.BLOCKS.getEntries().forEach(this::blockLang);
-        add("itemGroup.hundredMediaTab", "100 Media");
+        add("itemGroup.fancyFrames", Constants.MOD_NAME);
+        add("itemGroup.fancyFrames.tab", Constants.MOD_NAME);
     }
 
     protected void itemLang(RegistryObject<Item,?> entry) {

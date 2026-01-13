@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:item_frame"
+    },
+    "S": {
+      "tag": "minecraft:stone_crafting_materials"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SFS",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "fancyframes:stone_frame"
+  }
+}

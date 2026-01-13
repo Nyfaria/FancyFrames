@@ -6,11 +6,19 @@ import net.minecraft.world.item.*;
 public class FrameItem extends Item {
 
     ResourceLocation model;
-    public FrameItem(Properties properties, ResourceLocation frameType) {
+    boolean itemFrame;
+
+    public FrameItem(Properties properties, ResourceLocation frameType, boolean itemFrame) {
         super(properties);
         model = frameType;
+        this.itemFrame = itemFrame;
     }
+
     public ResourceLocation getModel() {
         return model;
+    }
+
+    public boolean isItemFrame() {
+        return itemFrame;
     }
 }

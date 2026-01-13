@@ -16,7 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-          "com.nyfaria.nyfsframes.ExampleMod"
+          "com.nyfaria.fancyframes.FancyFramesMod"
+        ],
+        "client": [
+          "com.nyfaria.fancyframes.FancyFramesModClient"
         ]
     },
     "mixins": [

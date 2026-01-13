@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fancyframes:diamond_frame_thin"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "fancyframes:diamond_frame"
+  }
+}

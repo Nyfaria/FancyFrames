@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:item_frame"
+    },
+    "G": {
+      "tag": "c:ingots/gold"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GFG",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "fancyframes:gold_frame"
+  }
+}

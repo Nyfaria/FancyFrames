@@ -15,7 +15,7 @@ public class ClientRenderHelper {
         poseStack.pushPose();
 //        poseStack.mulPose(Axis.YP.rotationDegrees(-facing.toYRot() + 180.0F));
         poseStack.scale(1, -1, 1);
-        poseStack.translate(0, -1, 0);
+        poseStack.translate(0.5, -1.5, 0.5);
         copperFrameModel.setupDir(FrameModel.Part.ALL);
         copperFrameModel.renderToBuffer(
                 poseStack,

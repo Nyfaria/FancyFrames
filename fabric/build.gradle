@@ -6,6 +6,7 @@ plugins {
 }
 
 
+sourceSets.main.resources { srcDir project(":common").file('src/generated/resources').getAbsolutePath() }
 
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"

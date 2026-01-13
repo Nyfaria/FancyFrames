@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "F": {
+      "item": "minecraft:item_frame"
+    }
+  },
+  "pattern": [
+    " D ",
+    "DFD",
+    " D "
+  ],
+  "result": {
+    "count": 1,
+    "id": "fancyframes:diamond_frame"
+  }
+}

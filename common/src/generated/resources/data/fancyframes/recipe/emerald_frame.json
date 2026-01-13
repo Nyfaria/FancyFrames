@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "tag": "c:gems/emerald"
+    },
+    "F": {
+      "item": "minecraft:item_frame"
+    }
+  },
+  "pattern": [
+    " E ",
+    "EFE",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "fancyframes:emerald_frame"
+  }
+}

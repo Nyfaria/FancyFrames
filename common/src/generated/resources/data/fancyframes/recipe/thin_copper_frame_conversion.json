@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fancyframes:copper_frame"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "fancyframes:copper_frame_thin"
+  }
+}

@@ -17,7 +17,6 @@ public class FancyFramesMod {
             .build());
 
     public FancyFramesMod(IEventBus eventBus) {
-        Constants.LOG.info("Hello NeoForge world!");
         CommonClass.init();
         ATTACHMENTS.register(eventBus);
     }
