@@ -116,6 +116,8 @@ public abstract class FrameModel extends EntityModel<Entity> {
                 top_right_connector.visible = true;
                 left_frame.visible = true;
                 right_frame.visible = true;
+                bottom_left_corner_v.visible = true;
+                bottom_right_corner_v.visible = true;
             }
             case BOTTOM_ALL -> {
                 bottom_frame.visible = true;
@@ -125,6 +127,8 @@ public abstract class FrameModel extends EntityModel<Entity> {
                 bottom_right_connector.visible = true;
                 left_frame.visible = true;
                 right_frame.visible = true;
+                top_left_corner_v.visible = true;
+                top_right_corner_v.visible = true;
             }
             case LEFT_ALL -> {
                 left_frame.visible = true;
@@ -134,6 +138,8 @@ public abstract class FrameModel extends EntityModel<Entity> {
                 bottom_left_connector.visible = true;
                 top_frame.visible = true;
                 bottom_frame.visible = true;
+                bottom_right_corner_v.visible = true;
+                top_right_corner_v.visible = true;
             }
             case RIGHT_ALL -> {
                 right_frame.visible = true;
@@ -143,6 +149,8 @@ public abstract class FrameModel extends EntityModel<Entity> {
                 bottom_right_connector.visible = true;
                 top_frame.visible = true;
                 bottom_frame.visible = true;
+                bottom_left_corner_v.visible = true;
+                top_left_corner_v.visible = true;
             }
             case ALL -> {
                 left_frame.visible = true;
