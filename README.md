@@ -1,4 +1,4 @@
-<img width="950" height="245" alt="frame_gallery" src="https://github.com/user-attachments/assets/1b45ae1f-d74a-4705-9e68-489195d29075" />
+<img width="2000" height="500" alt="FancyFramesBanner" src="https://github.com/user-attachments/assets/c6c5644a-447b-44b9-aa11-bebf48c750ef" />
 
 # Fancy Frames
 
