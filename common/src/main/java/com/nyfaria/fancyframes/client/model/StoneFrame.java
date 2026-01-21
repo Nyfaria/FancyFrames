@@ -13,8 +13,8 @@ import net.minecraft.world.entity.*;
 @Frame
 public class StoneFrame extends ThickFrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "stone_frame"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/stone_frame.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "stone_frame"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/stone_frame.png");
 
     public StoneFrame(ModelPart root) {
         super(root);

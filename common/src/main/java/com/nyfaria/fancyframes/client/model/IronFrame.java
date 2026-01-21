@@ -13,8 +13,8 @@ import net.minecraft.world.entity.*;
 @Frame
 public class IronFrame extends ThickFrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "iron_frame"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/iron_frame.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "iron_frame"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/iron_frame.png");
 
     public IronFrame(ModelPart root) {
         super(root);

@@ -1,18 +1,16 @@
 package com.nyfaria.fancyframes.datagen;
 
-import com.nyfaria.fancyframes.Constants;
+import com.nyfaria.fancyframes.*;
 import com.nyfaria.fancyframes.init.*;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.minecraft.data.*;
+import net.minecraft.resources.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.*;
+import net.minecraftforge.client.model.generators.*;
+import net.minecraftforge.common.data.*;
+import net.minecraftforge.registries.*;
 
 import java.util.function.*;
-import java.util.stream.*;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput generator, ExistingFileHelper existingFileHelper) {
@@ -25,13 +23,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         //         .map(Supplier::get)
         //         .forEach(this::simpleHandHeldModel);
 
+        // Stream.of()
+        //         .map(Supplier::get)
+        //         .forEach(this::simpleGeneratedModel);
+
         ItemInit.ITEMS.getEntries().stream()
                 .map(Supplier::get)
                 .forEach(this::simpleGeneratedModel);
-
-        // Stream.of()
-        //         .map(Supplier::get)
-        //         .forEach(this::simpleBlockItemModel);
     }
 
     protected ItemModelBuilder simpleBlockItemModel(Block block) {
@@ -39,6 +37,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(name, modLoc("block/" + name));
     }
 
+    protected ItemModelBuilder playerPlushieItemModel(Block block) {
+        String name = getName(block);
+        return withExistingParent(name, modLoc("item/player_plushie"));
+    }
+    protected ItemModelBuilder spawnEgg(Item block) {
+        String name = getName(block);
+        return withExistingParent(name, mcLoc("item/template_spawn_egg"));
+    }
     protected ItemModelBuilder simpleGeneratedModel(Item item) {
         return simpleModel(item, mcLoc("item/generated"));
     }
@@ -49,14 +55,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     protected ItemModelBuilder simpleModel(Item item, ResourceLocation parent) {
         String name = getName(item);
-        return singleTexture(name, parent, "layer0", modLoc("item/" + name.replace("_thin", "")));
+        return singleTexture(name, parent, "layer0", modLoc("item/" + name));
     }
 
     protected String getName(Item item) {
-        return BuiltInRegistries.ITEM.getKey(item).getPath();
+        return ForgeRegistries.ITEMS.getKey(item).getPath();
     }
 
     protected String getName(Block item) {
-        return BuiltInRegistries.BLOCK.getKey(item).getPath();
+        return ForgeRegistries.BLOCKS.getKey(item).getPath();
     }
 }

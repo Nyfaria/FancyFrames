@@ -13,8 +13,8 @@ import net.minecraft.world.entity.*;
 @Frame
 public class GoldFrame extends ThickFrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "gold_frame"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/gold_frame.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "gold_frame"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/gold_frame.png");
 
     public GoldFrame(ModelPart root) {
         super(root);

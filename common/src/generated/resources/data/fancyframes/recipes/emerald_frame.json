@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "tag": "c:ingots/copper"
+    "E": {
+      "item": "minecraft:emerald"
     },
     "F": {
       "item": "minecraft:item_frame"
     }
   },
   "pattern": [
-    " C ",
-    "CFC",
-    " C "
+    " E ",
+    "EFE",
+    " E "
   ],
   "result": {
-    "count": 1,
-    "id": "fancyframes:copper_frame"
-  }
+    "item": "fancyframes:emerald_frame"
+  },
+  "show_notification": true
 }

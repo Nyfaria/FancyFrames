@@ -13,8 +13,8 @@ import net.minecraft.world.entity.*;
 @Frame
 public class GoldFrameThin extends FrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "gold_frame_thin"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/gold_frame_thin.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "gold_frame_thin"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/gold_frame_thin.png");
 
 
     public GoldFrameThin(ModelPart root) {

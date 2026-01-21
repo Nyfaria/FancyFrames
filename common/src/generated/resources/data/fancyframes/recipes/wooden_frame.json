@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "D": {
-      "tag": "c:gems/diamond"
-    },
     "F": {
       "item": "minecraft:item_frame"
+    },
+    "L": {
+      "tag": "minecraft:logs"
     }
   },
   "pattern": [
-    " D ",
-    "DFD",
-    " D "
+    " L ",
+    "LFL",
+    " L "
   ],
   "result": {
-    "count": 1,
-    "id": "fancyframes:diamond_frame"
-  }
+    "item": "fancyframes:wooden_frame"
+  },
+  "show_notification": true
 }

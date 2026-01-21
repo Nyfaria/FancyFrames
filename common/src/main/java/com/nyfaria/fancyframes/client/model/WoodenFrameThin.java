@@ -13,8 +13,8 @@ import net.minecraft.world.entity.*;
 @Frame
 public class WoodenFrameThin extends FrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "wooden_frame_thin"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/wooden_frame_thin.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "wooden_frame_thin"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/wooden_frame_thin.png");
 
     public WoodenFrameThin(ModelPart root) {
         super(root);

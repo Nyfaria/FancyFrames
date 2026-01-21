@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:item_frame"
+            "items": [
+              "minecraft:item_frame"
+            ]
           }
         ]
       },
@@ -13,20 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fancyframes:gold_frame"
+        "recipe": "fancyframes:diamond_frame"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_frame"
+      "has_frame",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "fancyframes:gold_frame"
+      "fancyframes:diamond_frame"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

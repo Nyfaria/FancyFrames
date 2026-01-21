@@ -19,7 +19,7 @@ public class ItemInit {
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registries.ITEM, Constants.MODID);
 
     public static final RegistrationProvider<CreativeModeTab> CREATIVE_MODE_TABS = RegistrationProvider.get(Registries.CREATIVE_MODE_TAB, Constants.MODID);
-    public static final RegistryObject<CreativeModeTab, CreativeModeTab> TAB = CREATIVE_MODE_TABS.register(Constants.MODID, () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
+    public static final RegistryObject<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register(Constants.MODID, () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .icon(() -> new ItemStack(ItemInit.WOODEN_FRAME.get()))
             .displayItems(
                     (itemDisplayParameters, output) -> {
@@ -45,14 +45,14 @@ public class ItemInit {
             .build());
 
 
-    public static final RegistryObject<Item, FrameItem> WOODEN_FRAME = frame("wooden_frame");
-    public static final RegistryObject<Item, FrameItem> STONE_FRAME = frame("stone_frame");
-    public static final RegistryObject<Item, FrameItem> COPPER_FRAME = frame("copper_frame");
-    public static final RegistryObject<Item, FrameItem> IRON_FRAME = frame("iron_frame");
-    public static final RegistryObject<Item, FrameItem> GOLD_FRAME = frame("gold_frame");
-    public static final RegistryObject<Item, FrameItem> DIAMOND_FRAME = frame("diamond_frame");
-    public static final RegistryObject<Item, FrameItem> EMERALD_FRAME = frame("emerald_frame");
-    public static final RegistryObject<Item, FrameItem> NETHERITE_FRAME = frame("netherite_frame");
+    public static final RegistryObject<FrameItem> WOODEN_FRAME = frame("wooden_frame");
+    public static final RegistryObject<FrameItem> STONE_FRAME = frame("stone_frame");
+    public static final RegistryObject<FrameItem> COPPER_FRAME = frame("copper_frame");
+    public static final RegistryObject<FrameItem> IRON_FRAME = frame("iron_frame");
+    public static final RegistryObject<FrameItem> GOLD_FRAME = frame("gold_frame");
+    public static final RegistryObject<FrameItem> DIAMOND_FRAME = frame("diamond_frame");
+    public static final RegistryObject<FrameItem> EMERALD_FRAME = frame("emerald_frame");
+    public static final RegistryObject<FrameItem> NETHERITE_FRAME = frame("netherite_frame");
 
 
 //    public static final RegistryObject<Item, FrameItem> WOODEN_FRAME_THIN = thinFrame("wooden_frame_thin");
@@ -65,16 +65,16 @@ public class ItemInit {
 //    public static final RegistryObject<Item, FrameItem> NETHERITE_FRAME_THIN = thinFrame("netherite_frame_thin");
 
 
-
-    private static RegistryObject<Item, FrameItem> thinFrame(String string) {
-        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(Constants.MODID, string);
-        RegistryObject<Item, FrameItem> frame = ITEMS.register(string, () -> new FrameItem(getItemProperties(), loc, false));
+    private static RegistryObject<FrameItem> thinFrame(String string) {
+        ResourceLocation loc = new ResourceLocation(Constants.MODID, string);
+        RegistryObject<FrameItem> frame = ITEMS.register(string, () -> new FrameItem(getItemProperties(), loc, false));
         FrameHandler.addFrame(loc, frame);
         return frame;
     }
-    private static RegistryObject<Item, FrameItem> frame(String string) {
-        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(Constants.MODID, string);
-        RegistryObject<Item, FrameItem> frame = ITEMS.register(string, () -> new FrameItem(getItemProperties(), loc, true));
+
+    private static RegistryObject<FrameItem> frame(String string) {
+        ResourceLocation loc = new ResourceLocation(Constants.MODID, string);
+        RegistryObject<FrameItem> frame = ITEMS.register(string, () -> new FrameItem(getItemProperties(), loc, true));
         FrameHandler.addFrame(loc, frame);
         return frame;
     }

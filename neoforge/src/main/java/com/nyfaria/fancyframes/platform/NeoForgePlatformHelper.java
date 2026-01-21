@@ -1,11 +1,12 @@
 package com.nyfaria.fancyframes.platform;
 
 import com.nyfaria.fancyframes.*;
+import com.nyfaria.fancyframes.cap.*;
 import com.nyfaria.fancyframes.platform.services.IPlatformHelper;
 import net.minecraft.resources.*;
 import net.minecraft.world.entity.*;
-import net.neoforged.fml.ModList;
-import net.neoforged.fml.loading.FMLLoader;
+import net.minecraftforge.fml.*;
+import net.minecraftforge.fml.loading.*;
 
 public class NeoForgePlatformHelper implements IPlatformHelper {
 
@@ -29,11 +30,14 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
 
     @Override
     public ResourceLocation getFrameLoc(Entity entity) {
-        return entity.getExistingDataOrNull(FancyFramesMod.FRAME);
+        if(!FrameHolderAttacher.getHolder(entity).isPresent()) {
+            return null;
+        }
+        return FrameHolderAttacher.getHolderUnwrap(entity).getLocation();
     }
 
     @Override
     public void setFrameLoc(ResourceLocation frame, Entity entity) {
-        entity.setData(FancyFramesMod.FRAME,frame);
+        FrameHolderAttacher.getHolderUnwrap(entity).setLocation(frame);
     }
 }

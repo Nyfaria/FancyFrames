@@ -14,8 +14,8 @@ import net.minecraft.world.entity.*;
 @Frame
 public class CopperFrameThin extends FrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "copper_frame_thin"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/copper_frame_thin.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "copper_frame_thin"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/copper_frame_thin.png");
 
     public CopperFrameThin(ModelPart root) {
         super(root);

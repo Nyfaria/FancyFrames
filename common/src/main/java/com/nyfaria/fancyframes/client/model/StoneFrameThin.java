@@ -13,8 +13,8 @@ import net.minecraft.world.entity.*;
 @Frame
 public class StoneFrameThin extends FrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "stone_frame_thin"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/stone_frame_thin.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "stone_frame_thin"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/stone_frame_thin.png");
 
     public StoneFrameThin(ModelPart root) {
         super(root);

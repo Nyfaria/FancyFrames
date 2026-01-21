@@ -22,7 +22,7 @@ public class ClientRenderHelper {
                 buffer.getBuffer(RenderType.entityCutoutNoCull(copperFrameModel.getTexture())),
                 packedLight,
                 OverlayTexture.NO_OVERLAY,
-                0xFFFFFFFF
+                1,1,1,1
         );
         poseStack.popPose();
     }
@@ -30,8 +30,8 @@ public class ClientRenderHelper {
     public static <T extends Painting> void renderPaintingFrame(T entity, PoseStack poseStack, MultiBufferSource buffer, int packedLight, FrameModel copperFrameModel) {
         PaintingVariant variant = entity.getVariant().value();
 
-        int widthInBlocks = variant.width();
-        int heightInBlocks = variant.height();
+        int widthInBlocks = variant.getWidth() / 16;
+        int heightInBlocks = variant.getHeight() / 16;
 
         VertexConsumer vertexConsumer = buffer.getBuffer(RenderType.entityCutoutNoCull(copperFrameModel.getTexture()));
 
@@ -42,6 +42,7 @@ public class ClientRenderHelper {
                 if (isEdge) {
                     poseStack.pushPose();
                     poseStack.scale(1, -1, 1);
+                    poseStack.scale(16, 16, 16);
                     poseStack.scale(1.001f, 1.001f, 1.001f);
                     float offsetX = (x - (widthInBlocks - 1) / 2.0f);
                     float offsetY = (y - (heightInBlocks - 1) / 2.0f);
@@ -52,7 +53,7 @@ public class ClientRenderHelper {
                             vertexConsumer,
                             packedLight,
                             OverlayTexture.NO_OVERLAY,
-                            0xFFFFFFFF
+                            1,1,1,1
                     );
 
                     poseStack.popPose();

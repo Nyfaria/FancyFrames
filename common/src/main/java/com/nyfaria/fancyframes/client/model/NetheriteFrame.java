@@ -10,8 +10,8 @@ import net.minecraft.resources.*;
 @Frame
 public class NetheriteFrame extends ThickFrameModel {
     @Frame.Location
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "netherite_frame"), "main");
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Constants.MODID, "textures/entity/netherite_frame.png");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Constants.MODID, "netherite_frame"), "main");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Constants.MODID, "textures/entity/netherite_frame.png");
 
     public NetheriteFrame(ModelPart root) {
         super(root);

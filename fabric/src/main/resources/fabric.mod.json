@@ -1,38 +1,46 @@
 {
-    "schemaVersion": 1,
-    "id": "${mod_id}",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "${description}",
-    "authors": [
-        "${mod_author}"
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "${license}",
+  "icon": "${mod_id}.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.nyfaria.fancyframes.FancyFramesMod"
     ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
-    "license": "${license}",
-    "icon": "${mod_id}.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-          "com.nyfaria.fancyframes.FancyFramesMod"
-        ],
-        "client": [
-          "com.nyfaria.fancyframes.FancyFramesModClient"
-        ]
-    },
-    "mixins": [
-        "${mod_id}.mixins.json"
+    "client": [
+      "com.nyfaria.fancyframes.FancyFramesModClient"
     ],
-    "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
-        "fabric-api": "*",
-        "minecraft": "${minecraft_version}",
-        "java": ">=${java_version}"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+    "cardinal-components": [
+      "com.nyfaria.fancyframes.cap.FrameHolderAttacher"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=${java_version}"
+  },
+  "suggests": {
+    "another-mod": "*"
+  },
+  "custom": {
+    "cardinal-components": [
+      "fancyframes:frame"
+    ]
+  }
 }
   

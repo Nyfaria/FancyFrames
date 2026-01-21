@@ -7,11 +7,6 @@ import net.minecraft.resources.*;
 
 public class FancyFramesMod implements ModInitializer {
 
-    public static final AttachmentType<ResourceLocation> FRAME = AttachmentRegistry.create(ResourceLocation.fromNamespaceAndPath(Constants.MODID, "frame"),
-            builder -> builder
-                    .syncWith(ResourceLocation.STREAM_CODEC, (target,player) -> true)
-                    .persistent(ResourceLocation.CODEC)
-    );
 
     @Override
     public void onInitialize() {

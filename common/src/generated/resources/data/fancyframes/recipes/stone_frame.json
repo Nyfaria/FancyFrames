@@ -6,7 +6,7 @@
       "item": "minecraft:item_frame"
     },
     "S": {
-      "tag": "minecraft:stone_crafting_materials"
+      "item": "minecraft:stone"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     " S "
   ],
   "result": {
-    "count": 1,
-    "id": "fancyframes:stone_frame"
-  }
+    "item": "fancyframes:stone_frame"
+  },
+  "show_notification": true
 }

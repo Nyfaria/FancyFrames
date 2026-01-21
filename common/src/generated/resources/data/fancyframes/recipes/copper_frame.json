@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
     "F": {
       "item": "minecraft:item_frame"
-    },
-    "G": {
-      "tag": "c:ingots/gold"
     }
   },
   "pattern": [
-    " G ",
-    "GFG",
-    " G "
+    " C ",
+    "CFC",
+    " C "
   ],
   "result": {
-    "count": 1,
-    "id": "fancyframes:gold_frame"
-  }
+    "item": "fancyframes:copper_frame"
+  },
+  "show_notification": true
 }

@@ -1,14 +1,5 @@
 pluginManagement {
-    dependencyResolutionManagement {
-        versionCatalogs {
-            create("libs") {
-                from("com.nyfaria:versions-catalog-${minecraft_version}:latest.release")
-            }
-        }
-        repositories {
-            mavenLocal()
-        }
-    }
+
     repositories {
         gradlePluginPortal()
         mavenCentral()
@@ -58,6 +49,10 @@ pluginManagement {
                 includeGroup("net.minecraftforge")
             }
         }
+        maven {
+            name '100Media'
+            url 'https://maven.100media.dev'
+        }
     }
 }
 
@@ -65,7 +60,16 @@ pluginManagement {
 plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
 }
-
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from("com.nyfaria:versions-catalog-${minecraft_version}:1.0.9")
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
 // This should match the folder name of the project, or else IDEA may complain (see https://youtrack.jetbrains.com/issue/IDEA-317606)
 rootProject.name = 'FancyFrames'
 include("common")

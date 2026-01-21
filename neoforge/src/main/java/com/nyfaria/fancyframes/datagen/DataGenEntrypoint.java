@@ -3,12 +3,12 @@ package com.nyfaria.fancyframes.datagen;
 import com.nyfaria.fancyframes.Constants;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.minecraftforge.common.data.*;
+import net.minecraftforge.data.event.*;
+import net.minecraftforge.eventbus.api.*;
+import net.minecraftforge.fml.common.*;
 
-@EventBusSubscriber(modid = Constants.MODID, bus = EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = Constants.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenEntrypoint {
     @SubscribeEvent
     public static void onGatherData(GatherDataEvent event) {
@@ -17,8 +17,7 @@ public class DataGenEntrypoint {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         boolean includeServer = event.includeServer();
         boolean includeClient = event.includeClient();
-
-        generator.addProvider(includeServer, new ModRecipeProvider(packOutput, event.getLookupProvider()));
+        generator.addProvider(includeServer, new ModRecipeProvider(packOutput));
         generator.addProvider(includeClient, new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(includeClient, new ModLangProvider(packOutput));
     }

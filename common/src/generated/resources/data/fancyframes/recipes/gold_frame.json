@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "E": {
-      "tag": "c:gems/emerald"
-    },
     "F": {
       "item": "minecraft:item_frame"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
     }
   },
   "pattern": [
-    " E ",
-    "EFE",
-    " E "
+    " G ",
+    "GFG",
+    " G "
   ],
   "result": {
-    "count": 1,
-    "id": "fancyframes:emerald_frame"
-  }
+    "item": "fancyframes:gold_frame"
+  },
+  "show_notification": true
 }

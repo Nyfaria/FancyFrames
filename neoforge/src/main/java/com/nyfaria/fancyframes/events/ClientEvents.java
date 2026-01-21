@@ -1,23 +1,13 @@
 package com.nyfaria.fancyframes.events;
 
-import com.nyfaria.fancyframes.annotations.*;
 import com.nyfaria.fancyframes.client.*;
 import com.nyfaria.fancyframes.client.model.*;
-import com.nyfaria.fancyframes.util.*;
-import net.minecraft.client.*;
-import net.minecraft.client.model.geom.*;
-import net.minecraft.client.model.geom.builders.*;
-import net.neoforged.api.distmarker.*;
-import net.neoforged.bus.api.*;
-import net.neoforged.fml.common.*;
-import net.neoforged.neoforge.client.event.*;
-import org.reflections.*;
-import org.reflections.util.*;
+import net.minecraftforge.api.distmarker.*;
+import net.minecraftforge.client.event.*;
+import net.minecraftforge.eventbus.api.*;
+import net.minecraftforge.fml.common.*;
 
-import java.lang.reflect.*;
-import java.util.*;
-
-@EventBusSubscriber(Dist.CLIENT)
+@Mod.EventBusSubscriber(value = Dist.CLIENT, bus =  Mod.EventBusSubscriber.Bus.MOD )
 public class ClientEvents {
 
     @SubscribeEvent

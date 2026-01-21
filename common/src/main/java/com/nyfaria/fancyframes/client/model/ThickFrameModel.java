@@ -4,6 +4,8 @@ package com.nyfaria.fancyframes.client.model;
 import com.mojang.blaze3d.vertex.*;
 import net.minecraft.client.model.*;
 import net.minecraft.client.model.geom.*;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.texture.*;
 import net.minecraft.resources.*;
 import net.minecraft.world.entity.*;
 
@@ -170,8 +172,8 @@ public abstract class ThickFrameModel extends FrameModel {
     public abstract ResourceLocation getTexture();
 
     @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, int color) {
-        getGroup().render(poseStack, buffer, packedLight, packedOverlay, color);
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int i, int i1, float v, float v1, float v2, float v3) {
+        getGroup().render(poseStack, vertexConsumer, LightTexture.FULL_BRIGHT, OverlayTexture.NO_OVERLAY);
     }
 
 
