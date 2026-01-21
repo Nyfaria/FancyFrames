@@ -4,7 +4,7 @@ plugins {
 }
 
 base {
-    archivesName = "${mod_id}-${project.name}-${minecraft_version}"
+    archivesName = "${mod_id}-${project.name}-${libs.versions.minecraft}"
 }
 
 java {
@@ -81,17 +81,17 @@ processResources {
     def expandProps = [
             "version"                      : version,
             "group"                        : project.group, //Else we target the task's group.
-            "minecraft_version"            : minecraft_version,
+            "minecraft_version"            : libs.versions.minecraft,
             "minecraft_version_range"      : minecraft_version_range,
-            "fabric_version"               : fabric_version,
-            "fabric_loader_version"        : fabric_loader_version,
+            "fabric_version"               : libs.versions.fabric,
+            "fabric_loader_version"        : libs.versions.fabric.loader,
             "mod_name"                     : mod_name,
             "mod_author"                   : mod_author,
             "mod_id"                       : mod_id,
             "license"                      : license,
             "description"                  : project.description,
-            "neoforge_version"             : neoforge_version,
-            "neoforge_loader_version_range": neoforge_loader_version_range,
+            "neoforge_version"             : libs.versions.forge,
+            "neoforge_loader_version_range": libs.versions.forge.loader.range,
             "credits"                      : credits,
             "java_version"                 : java_version
     ]
