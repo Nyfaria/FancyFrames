@@ -1,4 +1,14 @@
 pluginManagement {
+    dependencyResolutionManagement {
+        versionCatalogs {
+            create("libs") {
+                from("com.nyfaria:versions-catalog-${minecraft_version}:latest.release")
+            }
+        }
+        repositories {
+            mavenLocal()
+        }
+    }
     repositories {
         gradlePluginPortal()
         mavenCentral()
@@ -20,6 +30,7 @@ pluginManagement {
             }
             filter {
                 includeGroup("net.fabricmc")
+                includeGroup('net.fabricmc.unpick')
                 includeGroup("fabric-loom")
             }
         }
@@ -49,6 +60,7 @@ pluginManagement {
         }
     }
 }
+
 
 plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'

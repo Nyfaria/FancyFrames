@@ -1,23 +1,23 @@
 plugins {
     id 'multiloader-loader'
-    id 'fabric-loom'
-    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
-    id 'com.matyrobbrt.mc.registrationutils' version "${regutils_version}"
+    alias(libs.plugins.loom.fabric)
+    alias(libs.plugins.mod.publish)
+    alias(libs.plugins.regutils.loader)
 }
 
 
 sourceSets.main.resources { srcDir project(":common").file('src/generated/resources').getAbsolutePath() }
 
 dependencies {
-    minecraft "com.mojang:minecraft:${minecraft_version}"
+    minecraft "com.mojang:minecraft:${libs.versions.minecraft}"
     mappings loom.layered() {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
+        parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft}:${libs.versions.parchment.version}@zip")
     }
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${project.forge_config_api_port_version}"
-    include "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${project.forge_config_api_port_version}"
+    modImplementation "net.fabricmc:fabric-loader:${libs.versions.fabric.loader}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${libs.versions.fabric.api}"
+    modApi(libs.fabric.config.api)
+    include(libs.fabric.config.api)
 }
 
 loom {
@@ -49,13 +49,13 @@ publishMods {
     changelog = project(":common").file("changelog.md").text
     type = STABLE
     modLoaders.add("fabric")
-    displayName = "${mod_name}-${minecraft_version}-[Fabric]-${project.version}"
+    displayName = "${mod_name}-${libs.versions.minecraft}-[Fabric]-${project.version}"
     dryRun = dry_run.toBoolean()
     if (curseforge_publishing_enabled.toBoolean()) {
         curseforge {
             projectId = curseforge_project_id
             accessToken = curseforge_token
-            minecraftVersions.add(minecraft_version)
+            minecraftVersions.add(libs.versions.minecraft)
             clientRequired = true
             serverRequired = true
             javaVersions.add(JavaVersion.VERSION_21)
@@ -68,7 +68,7 @@ publishMods {
         modrinth {
             accessToken = modrinth_token
             projectId = modrinth_project_id
-            minecraftVersions.add(minecraft_version)
+            minecraftVersions.add(libs.versions.minecraft)
             requires {
                 slug = "fabric-api"
             }

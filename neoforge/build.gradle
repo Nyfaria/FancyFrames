@@ -1,8 +1,8 @@
 plugins {
     id 'multiloader-loader'
-    id 'net.neoforged.moddev'
-    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
-    id 'com.matyrobbrt.mc.registrationutils' version "${regutils_version}"
+    alias(libs.plugins.mdg.forge)
+    alias(libs.plugins.mod.publish)
+    alias(libs.plugins.regutils.loader)
 }
 
 
@@ -10,15 +10,15 @@ plugins {
 // This location is hardcoded in FML and can not be changed.
 // https://github.com/neoforged/FancyModLoader/blob/a952595eaaddd571fbc53f43847680b00894e0c1/loader/src/main/java/net/neoforged/fml/loading/moddiscovery/ModFile.java#L118
 
-neoForge {
-    version = "${neoforge_version}"
+legacyForge {
+    version = libs.versions.common.minecraft
     def at = project(":common").file('src/main/resources/META-INF/accesstransformer.cfg')
     if (at.exists()) {
-        minecraft.accessTransformers.file at
+        accessTransformers = [at]
     }
     parchment {
-        minecraftVersion = parchment_minecraft
-        mappingsVersion = parchment_version
+        minecraftVersion = libs.versions.parchment.minecraft
+        mappingsVersion = libs.versions.parchment.version
     }
 
     mods {
@@ -33,12 +33,9 @@ neoForge {
         }
         client {
             client()
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
         server {
             server()
-            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-            programArgument '--nogui'
         }
         data {
             data()
@@ -49,23 +46,21 @@ neoForge {
 sourceSets.main.resources { srcDir project(":common").file('src/generated/resources').getAbsolutePath() }
 
 dependencies {
-    implementation 'org.reflections:reflections:0.10.2'
-    jarJar 'org.reflections:reflections:0.10.2'
-    clientAdditionalRuntimeClasspath 'org.reflections:reflections:0.10.2'
+
 }
 
 publishMods {
     file = jar.archiveFile
     changelog = project(":common").file("changelog.md").text
     type = STABLE
-    modLoaders.add("neoforge")
-    displayName = "${mod_name}-${minecraft_version}-[NeoForge]-${project.version}"
+    modLoaders.add("forge")
+    displayName = "${mod_name}-${libs.versions.minecraft}-[Forge]-${project.version}"
     dryRun = dry_run.toBoolean()
     if (curseforge_publishing_enabled.toBoolean()) {
         curseforge {
             projectId = curseforge_project_id
             accessToken = curseforge_token
-            minecraftVersions.add(minecraft_version)
+            minecraftVersions.add(libs.versions.minecraft)
             clientRequired = true
             serverRequired = true
             javaVersions.add(JavaVersion.VERSION_17)
@@ -75,7 +70,7 @@ publishMods {
         modrinth {
             accessToken = modrinth_token
             projectId = modrinth_project_id
-            minecraftVersions.add(minecraft_version)
+            minecraftVersions.add(libs.versions.minecraft)
         }
     }
 }

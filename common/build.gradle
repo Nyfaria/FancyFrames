@@ -1,42 +1,28 @@
 plugins {
     id 'multiloader-common'
-    id 'net.neoforged.moddev'
-    id 'com.matyrobbrt.mc.registrationutils' version "${regutils_version}"
+    alias(libs.plugins.mdg.forge)
+    alias(libs.plugins.regutils.loader)
 }
 
 
-neoForge {
-    neoFormVersion = neo_form_version
+legacyForge {
+    mcpVersion = minecraft_version
     def at = file('src/main/resources/META-INF/accesstransformer.cfg')
     if (at.exists()) {
-        accessTransformers.from(at.absolutePath)
+        accessTransformers = [at]
     }
     parchment {
-        minecraftVersion = parchment_minecraft
-        mappingsVersion = parchment_version
-    }
-    runs {
-        client {
-            client()
-        }
-        server {
-            server()
-        }
-        data {
-            data()
-        }
+        minecraftVersion = libs.versions.parchment.minecraft
+        mappingsVersion = libs.versions.parchment.version
     }
 }
 repositories {
     maven { url "https://maven.fabricmc.net/" }
 }
 dependencies {
-    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
-    // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
-    compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.5.2'
-    annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.5.2'
-    compileOnly "fuzs.forgeconfigapiport:forgeconfigapiport-common-neoforgeapi:${project.forge_config_api_port_version}"
-    implementation 'org.reflections:reflections:0.10.2'
+    compileOnly(libs.bundles.mixin.common)
+    annotationProcessor libs.mixin.extras
+    compileOnly libs.common.config.api
 }
 
 configurations {
