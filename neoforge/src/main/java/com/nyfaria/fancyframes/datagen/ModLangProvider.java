@@ -2,8 +2,6 @@ package com.nyfaria.fancyframes.datagen;
 
 import com.google.common.collect.ImmutableMap;
 import com.nyfaria.fancyframes.Constants;
-import com.nyfaria.fancyframes.init.BlockInit;
-import com.nyfaria.fancyframes.init.EntityInit;
 import com.nyfaria.fancyframes.init.ItemInit;
 import com.nyfaria.fancyframes.registration.RegistryObject;
 import net.minecraft.data.PackOutput;
@@ -32,8 +30,6 @@ public class ModLangProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         ItemInit.ITEMS.getEntries().forEach(this::itemLang);
-        EntityInit.ENTITIES.getEntries().forEach(this::entityLang);
-        BlockInit.BLOCKS.getEntries().forEach(this::blockLang);
         add("itemGroup.fancyframes", Constants.MOD_NAME);
         add("itemGroup.fancyframes.tab", Constants.MOD_NAME);
     }

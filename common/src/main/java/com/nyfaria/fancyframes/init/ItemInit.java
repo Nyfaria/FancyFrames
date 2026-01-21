@@ -32,14 +32,14 @@ public class ItemInit {
                         output.accept(ItemInit.EMERALD_FRAME.get());
                         output.accept(ItemInit.NETHERITE_FRAME.get());
 
-                        output.accept(ItemInit.WOODEN_FRAME_THIN.get());
-                        output.accept(ItemInit.STONE_FRAME_THIN.get());
-                        output.accept(ItemInit.COPPER_FRAME_THIN.get());
-                        output.accept(ItemInit.IRON_FRAME_THIN.get());
-                        output.accept(ItemInit.GOLD_FRAME_THIN.get());
-                        output.accept(ItemInit.DIAMOND_FRAME_THIN.get());
-                        output.accept(ItemInit.EMERALD_FRAME_THIN.get());
-                        output.accept(ItemInit.NETHERITE_FRAME_THIN.get());
+//                        output.accept(ItemInit.WOODEN_FRAME_THIN.get());
+//                        output.accept(ItemInit.STONE_FRAME_THIN.get());
+//                        output.accept(ItemInit.COPPER_FRAME_THIN.get());
+//                        output.accept(ItemInit.IRON_FRAME_THIN.get());
+//                        output.accept(ItemInit.GOLD_FRAME_THIN.get());
+//                        output.accept(ItemInit.DIAMOND_FRAME_THIN.get());
+//                        output.accept(ItemInit.EMERALD_FRAME_THIN.get());
+//                        output.accept(ItemInit.NETHERITE_FRAME_THIN.get());
 
                     }).title(Component.translatable("itemGroup." + Constants.MODID + ".tab"))
             .build());
@@ -55,14 +55,14 @@ public class ItemInit {
     public static final RegistryObject<Item, FrameItem> NETHERITE_FRAME = frame("netherite_frame");
 
 
-    public static final RegistryObject<Item, FrameItem> WOODEN_FRAME_THIN = thinFrame("wooden_frame_thin");
-    public static final RegistryObject<Item, FrameItem> STONE_FRAME_THIN = thinFrame("stone_frame_thin");
-    public static final RegistryObject<Item, FrameItem> COPPER_FRAME_THIN = thinFrame("copper_frame_thin");
-    public static final RegistryObject<Item, FrameItem> IRON_FRAME_THIN = thinFrame("iron_frame_thin");
-    public static final RegistryObject<Item, FrameItem> GOLD_FRAME_THIN = thinFrame("gold_frame_thin");
-    public static final RegistryObject<Item, FrameItem> EMERALD_FRAME_THIN = thinFrame("emerald_frame_thin");
-    public static final RegistryObject<Item, FrameItem> DIAMOND_FRAME_THIN = thinFrame("diamond_frame_thin");
-    public static final RegistryObject<Item, FrameItem> NETHERITE_FRAME_THIN = thinFrame("netherite_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> WOODEN_FRAME_THIN = thinFrame("wooden_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> STONE_FRAME_THIN = thinFrame("stone_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> COPPER_FRAME_THIN = thinFrame("copper_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> IRON_FRAME_THIN = thinFrame("iron_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> GOLD_FRAME_THIN = thinFrame("gold_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> EMERALD_FRAME_THIN = thinFrame("emerald_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> DIAMOND_FRAME_THIN = thinFrame("diamond_frame_thin");
+//    public static final RegistryObject<Item, FrameItem> NETHERITE_FRAME_THIN = thinFrame("netherite_frame_thin");
 
 
 

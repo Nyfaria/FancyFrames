@@ -80,70 +80,70 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.ITEM_FRAME)
                 .unlockedBy("has_frame", has(Items.ITEM_FRAME))
                 .save(p_301172_);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.WOODEN_FRAME.get(), 1)
-                .requires(ItemInit.WOODEN_FRAME_THIN.get())
-                .unlockedBy("has_wooden_frame", has(ItemInit.WOODEN_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "wooden_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.WOODEN_FRAME_THIN.get(), 1)
-                .requires(ItemInit.WOODEN_FRAME.get())
-                .unlockedBy("has_wooden_frame", has(ItemInit.WOODEN_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_wooden_frame_conversion"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.STONE_FRAME.get(), 1)
-                .requires(ItemInit.STONE_FRAME_THIN.get())
-                .unlockedBy("has_stone_frame", has(ItemInit.STONE_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "stone_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.STONE_FRAME_THIN.get(), 1)
-                .requires(ItemInit.STONE_FRAME.get())
-                .unlockedBy("has_stone_frame", has(ItemInit.STONE_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_stone_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.COPPER_FRAME.get(), 1)
-                .requires(ItemInit.COPPER_FRAME_THIN.get())
-                .unlockedBy("has_copper_frame", has(ItemInit.COPPER_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "copper_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.COPPER_FRAME_THIN.get(), 1)
-                .requires(ItemInit.COPPER_FRAME.get())
-                .unlockedBy("has_copper_frame", has(ItemInit.COPPER_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_copper_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.IRON_FRAME.get(), 1)
-                .requires(ItemInit.IRON_FRAME_THIN.get())
-                .unlockedBy("has_iron_frame", has(ItemInit.IRON_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "iron_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.IRON_FRAME_THIN.get(), 1)
-                .requires(ItemInit.IRON_FRAME.get())
-                .unlockedBy("has_iron_frame", has(ItemInit.IRON_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_iron_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.GOLD_FRAME.get(), 1)
-                .requires(ItemInit.GOLD_FRAME_THIN.get())
-                .unlockedBy("has_gold_frame", has(ItemInit.GOLD_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "gold_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.GOLD_FRAME_THIN.get(), 1)
-                .requires(ItemInit.GOLD_FRAME.get())
-                .unlockedBy("has_gold_frame", has(ItemInit.GOLD_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_gold_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.DIAMOND_FRAME.get(), 1)
-                .requires(ItemInit.DIAMOND_FRAME_THIN.get())
-                .unlockedBy("has_diamond_frame", has(ItemInit.DIAMOND_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "diamond_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.DIAMOND_FRAME_THIN.get(), 1)
-                .requires(ItemInit.DIAMOND_FRAME.get())
-                .unlockedBy("has_diamond_frame", has(ItemInit.DIAMOND_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_diamond_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.EMERALD_FRAME.get(), 1)
-                .requires(ItemInit.EMERALD_FRAME_THIN.get())
-                .unlockedBy("has_emerald_frame", has(ItemInit.EMERALD_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "emerald_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.EMERALD_FRAME_THIN.get(), 1)
-                .requires(ItemInit.EMERALD_FRAME.get())
-                .unlockedBy("has_emerald_frame", has(ItemInit.EMERALD_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_emerald_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.NETHERITE_FRAME.get(), 1)
-                .requires(ItemInit.NETHERITE_FRAME_THIN.get())
-                .unlockedBy("has_netherite_frame", has(ItemInit.NETHERITE_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "netherite_frame_conversion"));
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.NETHERITE_FRAME_THIN.get(), 1)
-                .requires(ItemInit.NETHERITE_FRAME.get())
-                .unlockedBy("has_netherite_frame", has(ItemInit.NETHERITE_FRAME.get()))
-                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_netherite_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.WOODEN_FRAME.get(), 1)
+//                .requires(ItemInit.WOODEN_FRAME_THIN.get())
+//                .unlockedBy("has_wooden_frame", has(ItemInit.WOODEN_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "wooden_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.WOODEN_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.WOODEN_FRAME.get())
+//                .unlockedBy("has_wooden_frame", has(ItemInit.WOODEN_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_wooden_frame_conversion"));
+//
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.STONE_FRAME.get(), 1)
+//                .requires(ItemInit.STONE_FRAME_THIN.get())
+//                .unlockedBy("has_stone_frame", has(ItemInit.STONE_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "stone_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.STONE_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.STONE_FRAME.get())
+//                .unlockedBy("has_stone_frame", has(ItemInit.STONE_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_stone_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.COPPER_FRAME.get(), 1)
+//                .requires(ItemInit.COPPER_FRAME_THIN.get())
+//                .unlockedBy("has_copper_frame", has(ItemInit.COPPER_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "copper_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.COPPER_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.COPPER_FRAME.get())
+//                .unlockedBy("has_copper_frame", has(ItemInit.COPPER_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_copper_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.IRON_FRAME.get(), 1)
+//                .requires(ItemInit.IRON_FRAME_THIN.get())
+//                .unlockedBy("has_iron_frame", has(ItemInit.IRON_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "iron_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.IRON_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.IRON_FRAME.get())
+//                .unlockedBy("has_iron_frame", has(ItemInit.IRON_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_iron_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.GOLD_FRAME.get(), 1)
+//                .requires(ItemInit.GOLD_FRAME_THIN.get())
+//                .unlockedBy("has_gold_frame", has(ItemInit.GOLD_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "gold_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.GOLD_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.GOLD_FRAME.get())
+//                .unlockedBy("has_gold_frame", has(ItemInit.GOLD_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_gold_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.DIAMOND_FRAME.get(), 1)
+//                .requires(ItemInit.DIAMOND_FRAME_THIN.get())
+//                .unlockedBy("has_diamond_frame", has(ItemInit.DIAMOND_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "diamond_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.DIAMOND_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.DIAMOND_FRAME.get())
+//                .unlockedBy("has_diamond_frame", has(ItemInit.DIAMOND_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_diamond_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.EMERALD_FRAME.get(), 1)
+//                .requires(ItemInit.EMERALD_FRAME_THIN.get())
+//                .unlockedBy("has_emerald_frame", has(ItemInit.EMERALD_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "emerald_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.EMERALD_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.EMERALD_FRAME.get())
+//                .unlockedBy("has_emerald_frame", has(ItemInit.EMERALD_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_emerald_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.NETHERITE_FRAME.get(), 1)
+//                .requires(ItemInit.NETHERITE_FRAME_THIN.get())
+//                .unlockedBy("has_netherite_frame", has(ItemInit.NETHERITE_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "netherite_frame_conversion"));
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemInit.NETHERITE_FRAME_THIN.get(), 1)
+//                .requires(ItemInit.NETHERITE_FRAME.get())
+//                .unlockedBy("has_netherite_frame", has(ItemInit.NETHERITE_FRAME.get()))
+//                .save(p_301172_, ResourceLocation.fromNamespaceAndPath(Constants.MODID, "thin_netherite_frame_conversion"));
     }
 }
