@@ -4,6 +4,9 @@ plugins {
     alias(libs.plugins.regutils.loader)
 }
 
+configurations.all {
+    resolutionStrategy.cacheDynamicVersionsFor(1, "seconds")
+}
 
 legacyForge {
     mcpVersion = minecraft_version

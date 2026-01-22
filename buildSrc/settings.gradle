@@ -6,7 +6,7 @@ def minecraftVersion = props.getProperty("minecraft_version")
 dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
-            from("com.nyfaria:versions-catalog-${minecraftVersion}:1.0.8")
+            from("com.nyfaria:versions-catalog-${minecraftVersion}:latest.release")
         }
     }
     repositories {

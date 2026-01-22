@@ -63,11 +63,14 @@ plugins {
 dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
-            from("com.nyfaria:versions-catalog-${minecraft_version}:1.0.9")
+            from("com.nyfaria:versions-catalog-${minecraft_version}:latest.release")
         }
     }
     repositories {
-        mavenLocal()
+        maven {
+            name "100mediaReleases"
+            url "https://maven.100media.dev/releases"
+        }
     }
 }
 // This should match the folder name of the project, or else IDEA may complain (see https://youtrack.jetbrains.com/issue/IDEA-317606)
